@@ -1,0 +1,14 @@
+{
+  "name": "lucky-group-wheel",
+  "version": "1.0.0",
+  "description": "Lucky draw web app with group management and animated game modes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}

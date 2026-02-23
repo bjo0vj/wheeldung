@@ -11,11 +11,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 // API routes
 app.use('/api', apiRoutes);
 
+// Uptime monitor ping route
+app.get('/ping', (req, res) => {
+    res.status(200).send('pong');
+});
+
 // SPA fallback — all non-API routes serve index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`Lucky Wheel server running on http://localhost:${PORT}`);
+    console.log(`Lucky Wheel server running on http://localhost:${PORT}`);
 });
